@@ -3,112 +3,184 @@
 <head>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pagina de la Facultad</title>
+<title>Facultad Nacional de Jujuy</title>
 <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   --> 
 <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<link rel="stylesheet" href="/css/styles.css"/>
 </head>
 <body>
+
+<div>
 	
-<div class="container">
-	<header>
-		<div data-th-replace="~{fragments/Header::navbar}">				
-		</div>
-	</header>
-	<div class="row">		
-	<main class="col-9">	
-	<div class="row">	
-		<section class="col-6">
-			<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/imagenes/autogood.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+ <div class="header-container">
+        <header>
+            <nav class="navbar bg-dark border-bottom border-body header-navbar" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">
+                        <img alt="imagen de la facultad" src="/imagenes/logo.png" class="img-fluid custom-img-size link-image">
+                    </a>
+                    <div class="navbar-title-container">
+                        <h1 style="color: white;" class="nombre">FACULTAD NACIONAL DE JUJUY</h1>
+                        <h4 style="color: white;" class="eslogan">"La educación es lo que sobrevive cuando lo aprendido ha sido olvidado"</h4>
+                    </div>
+                    <form class="d-flex" role="search" action="">
+                        <input class="form-control me-2" type="search" placeholder="¿Qué busca?" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
 </div>
-		</section>
-		
-		<section class="col-6">
-				<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
+
+<div class="navbar-container">
+			<nav class="navbar bg-body-tertiary navbar-custom">
+				<div class="container-fluid">
+					<div class="imagenes-container">
+						<a class="navbar-brand" href="https://www.instagram.com">
+							<img alt="imagenDeInstagram" src="/imagenes/insta.png" class="img-fluid custom-img-size-insta link-image">
+						</a>
+						<a class="navbar-brand" href="https://www.facebook.com">
+							<img alt="imagenDeFacebook" src="/imagenes/facebook.png" class="img-fluid custom-img-size-face link-image">
+						</a>
+						<a class="navbar-brand" href="https://www.youtube.com">
+							<img alt="imagenDeYoutube" src="/imagenes/youtube.png" class="img-fluid custom-img-size-youtu link-image">
+						</a>
+					</div>
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+						aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="offcanvas offcanvas-end" tabindex="-1"
+						id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu de Navegacion</h5>
+							<button type="button" class="btn-close"
+								data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+								<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+								<li class="nav-item"><a class="nav-link active" href="/acercade">Acerca de</a>
+								</li>
+								<li class="nav-item dropdown"><a
+									class="nav-link active dropdown-toggle" href="/AcercaDe" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Ingenieria en Quimica</a></li>
+										<li><a class="dropdown-item" href="#">Ingenieria en Minas</a></li>
+										<li><a class="dropdown-item" href="#">Ingenieria en Informatica</a></li>
+										<li><a class="dropdown-item" href="#">Ingenieria Industrial</a></li>
+										<li><a class="dropdown-item" href="#">Analista Programador Universitario</a></li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="#">Mas Carreras...</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link active" href="#">Noticias</a>
+								</li><li class="nav-item"><a class="nav-link active" href="#">Contactos</a>
+							</li></ul>
+						</div>
+					</div>
+				</div>
+			</nav>
 </div>
-</section>		
-</div>	
-		
+
+<div>
+	<main>
+		<main>
+        <section id="history" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/imagenes/logo.png" alt="Facultad Nacional de Jujuy" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Nuestra historia</h2>
+                        <p>La Facultad Nacional de Jujuy fue fundada en el año 1973 como una institución de educación superior dedicada a la enseñanza e investigación en ingeniería y tecnología.</p>
+                        <p>Desde su fundación, la facultad ha desempeñado un papel importante en el desarrollo de la región de Jujuy, ofreciendo programas educativos de alta calidad y realizando investigaciones relevantes para la región y el país.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="/imagenes/quimica.png" alt="Ingeniería Química" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingeniería Química</h5>
+                                <p class="card-text">Programa educativo de cuatro años en el área de Química que abarca las áreas de ciencia y tecnología, biotecnología y nanotecnología.</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="/imagenes/minas.png" alt="Ingeniería de Minas" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingeniería de Minas</h5>
+                                <pclass="card-text">Programa educativo de cuatro años en el área de Minas y Metalurgia que abarca las áreas de ingeniería de minas, metalurgia, explotación y gestión de minas.</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="/imagenes/industrial.png" alt="Ingeniería Industrial" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingeniería Industrial</h5>
+                                <p class="card-text">Programa educativo de cuatro años en el área de Ingeniería Industrial que abarca las áreas de ingeniería mecánica, electromecánica, de producción, gestión de empresas y administración de empresas.</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="/imagenes/informatica.png" alt="Ingeniería Informatica" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Ingeniería Informatica</h5>
+                                <p class="card-text">La Ingeniería Informática es una disciplina que se centra en el diseño, desarrollo, implementación y gestión de sistemas de información y tecnologías computacionales. Los ingenieros informáticos son profesionales capacitados para trabajar en diversos campos relacionados con la informática, desde el desarrollo de software hasta la administración de redes y sistemas.</p>
+                                <a href="#" class="btn btn-primary">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>		
 	</main>
-	<aside class="col-3">
-		<div class="card" style="width: 18rem;">
-  		<img src="..." class="card-img-top" alt="...">
-  		<div class="card-body">
-    	<h5 class="card-title">Card title</h5>
-    	<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    	<a href="#" class="btn btn-primary">Go somewhere</a>
-  		</div>
-		</div>
-	</aside>	
-	</div>		
+
+</div>
+
 	<footer>
-		<h1>Footer</h1>
-		<div data-th-replace="~{fragments/Header::footer}">	
-			
+	<div>
+		<div>
+		<h3 style="color: white;">Informacion de contacto con la Facultad</h3>
+			<ul>
+				<li style="color: white;">San Salvador de Jujuy-Capital-Calle 19 de abril N°800</li>
+				<li style="color: white;">3884225800</li>
+				<li ><a href="https://www.gmail.com">facultadNacionalJujuy@gmail.com</a></li>
+			</ul>
 		</div>
+		<div>
+		<h3 style="color: white;">Redes Sociales</h3>
+		<ul>
+			<li><a href="https://www.instagram.com">Instagram</a></li>
+			<li><a href="https://www.facebook.com">Facebook</a></li>
+			<li><a href="https://www.twitter.com">Twitter</a></li>
+		</ul>
+		</div>
+		<div>
+			<h5 style="color: white;">Copyright © 2010-2023 - Facultad Nacional De Jujuy</h5>
+		</div>
+	</div>
 	</footer>
 </div>
 		
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}" type="text/javascript"></script>
 </body>
 </html>
