@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facultad Nacional de Jujuy</title>
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<link rel="stylesheet" href="/css/styles.css"/>
+</head>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	flex: 1;
+}
+</style>
+
+<body>
+
+<header data-th-insert="/layouts/header :: header"></header>
+<nav data-th-insert="/layouts/header :: navbar"></nav>
+
+	<div class="container">
+
+		<h5>La Facultad de Ingeniería de la Universidad Nacional de Jujuy
+			(UNJu) ha sido protagonista de diversas actividades y noticias
+			relevantes en 2024, demostrando su compromiso con la educación, la
+			investigación y el bienestar de sus estudiantes.</h5>
+		<br>
+		<h1>Becas y Apoyo Estudiantil</h1>
+		<h3>Becas Manuel Belgrano y Fundación YPF</h3>
+		<p>La Facultad de Ingeniería participa en programas de becas para
+			apoyar a sus estudiantes. Las Becas Manuel Belgrano ofrecen apoyo
+			económico a estudiantes de disciplinas estratégicas como Ingeniería
+			Química, Ingeniería en Minas, y otras áreas relacionadas con el
+			desarrollo productivo del país. Los montos se ajustan anualmente y
+			están destinados a estudiantes de bajos ingresos. Por otro lado, la
+			Fundación YPF también ofrece becas para estudiantes de Ingeniería
+			Química, Licenciatura en Ciencias Geológicas e Ingeniería en Minas,
+			con un monto mensual de $150,000, renovables anualmente​ (UNJu
+			Radio)​.</p>
+		<br>
+		<h1>Actividades Académicas y Eventos</h1>
+		<h3>Examen de Ingreso 2024</h3>
+		<p>El pasado marzo se llevó a cabo el examen de ingreso para la
+			Facultad de Ingeniería, con un enfoque en el módulo de matemáticas.
+			Este examen es crucial para la admisión de nuevos estudiantes y se
+			desarrolló con éxito en la sede de San Salvador de Jujuy​ (UNJu
+			Radio)​.</p>
+		<br>
+		<h1>Movilizaciones Estudiantiles</h1>
+		<h3>Paro Estudiantil</h3>
+		<p>En abril de 2024, los estudiantes de la Facultad de Ingeniería
+			iniciaron un paro para exigir mejoras en las condiciones de estudio y
+			medidas contra la violencia de género. Esta movilización reflejó el
+			compromiso de la comunidad estudiantil con temas críticos que afectan
+			su bienestar y seguridad en el entorno académico​ (Animal Politico)​.</p>
+		<br>
+		<h1>Programas de Extensión e Investigación</h1>
+		<h3>Semana de la Ingeniería 2024</h3>
+		<p>La Facultad de Ingeniería también participó en la Semana de la
+			Ingeniería, un evento organizado en colaboración con el Centro
+			Argentino de Ingenieros. Durante esta semana, se realizaron
+			conferencias, talleres y actividades para promover la ingeniería y su
+			impacto en el desarrollo sostenible y tecnológico del país​ (UNJu
+			Radio)​.</p>
+		<br>
+		<h1>Innovación y Desarrollo</h1>
+		<h3>Proyectos de Energía Renovable</h3>
+		<p>La facultad continúa desarrollando proyectos de investigación
+			en energías renovables y tecnología ambiental. Estos proyectos no
+			solo buscan avanzar en el conocimiento científico, sino también
+			contribuir a soluciones sostenibles para problemas locales y
+			globales.</p>
+		<br>
+	</div>
+
+<footer data-th-insert="/layouts/footer :: footer"></footer>
+
+<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}" type="text/javascript"></script>
+</body>
+</html>

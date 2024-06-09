@@ -17,9 +17,4 @@ public class MainController {
 	public String getIndex() {
 		return "index";
 	}
-	
-	@GetMapping({"/acercade", "/acerca"})
-    public String getAcercade() {
-        return "acercade";
-    }
 }

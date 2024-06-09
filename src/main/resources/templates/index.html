@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>      
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,27 +60,14 @@
 						</div>
 						<div class="offcanvas-body">
 							<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-								<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+								<li class="nav-item"><a class="nav-link active" aria-current="page" href="/principal/index">Inicio</a></li>
 								<li class="nav-item"><a class="nav-link active" href="/acercade">Acerca de</a>
-								</li>
-								<li class="nav-item dropdown"><a
-									class="nav-link active dropdown-toggle" href="/AcercaDe" role="button"
-									data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
-									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">Ingenieria en Quimica</a></li>
-										<li><a class="dropdown-item" href="#">Ingenieria en Minas</a></li>
-										<li><a class="dropdown-item" href="#">Ingenieria en Informatica</a></li>
-										<li><a class="dropdown-item" href="#">Ingenieria Industrial</a></li>
-										<li><a class="dropdown-item" href="#">Analista Programador Universitario</a></li>
-										<li>
-											<hr class="dropdown-divider">
-										</li>
-										<li><a class="dropdown-item" href="#">Mas Carreras...</a></li>
-									</ul>
-								</li>
-								<li class="nav-item"><a class="nav-link active" href="#">Noticias</a>
-								</li><li class="nav-item"><a class="nav-link active" href="#">Contactos</a>
-							</li></ul>
+								</li>								
+								<li class="nav-item"><a class="nav-link active" href="/Noticias">Noticias</a>
+								</li><li class="nav-item"><a class="nav-link active" href="/Contactos">Contactos</a>
+							</li>
+							<li class="nav-item"><a class="nav-link active" href="/AgregarDatos">Agregar o Añadir informacion</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -121,9 +108,9 @@
                             <img src="/imagenes/minas.png" alt="Ingeniería de Minas" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Ingeniería de Minas</h5>
-                                <pclass="card-text">Programa educativo de cuatro años en el área de Minas y Metalurgia que abarca las áreas de ingeniería de minas, metalurgia, explotación y gestión de minas.<p></p>
+                                <p class="card-text">Programa educativo de cuatro años en el área de Minas y Metalurgia que abarca las áreas de ingeniería de minas, metalurgia, explotación y gestión de minas.<p></p>
                                 <a href="#" class="btn btn-primary">Más información</a>
-                            </pclass></div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
