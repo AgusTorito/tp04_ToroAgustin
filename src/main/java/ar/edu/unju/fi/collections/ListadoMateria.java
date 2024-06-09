@@ -2,10 +2,17 @@ package ar.edu.unju.fi.collections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import ar.edu.unju.fi.model.Docente;
 import ar.edu.unju.fi.model.Materia;
 
 public class ListadoMateria {
 	public static List<Materia> materias = new ArrayList<Materia>();
+	
+	public static List<Materia> listarMateria() {
+		return materias.stream().filter(materias -> materias.getEstado()).collect(Collectors.toList());
+	}
 	
 	//Metodo para listar materias por codigo
 	public static Materia buscarMateriaPorCodigo (String codigo)
@@ -24,6 +31,7 @@ public class ListadoMateria {
 
 	public static void agregarMateria(Materia c)
 	{
+		c.setEstado(true);
 		materias.add(c);
 	}
 	

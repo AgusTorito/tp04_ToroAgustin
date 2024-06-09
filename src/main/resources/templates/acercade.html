@@ -7,25 +7,25 @@
 <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 <link rel="stylesheet" href="/css/styles.css"/>
 </head>
-<style>
-	* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .container {
-    flex: 1;
+	flex: 1;
 }
 </style>
 <body>
@@ -33,12 +33,66 @@ body {
 <header data-th-insert="~{/layouts/header :: header}"></header>
 <nav data-th-insert="~{/layouts/header :: navbar}"></nav>
 
-<div class="container">
+	<div class="container">
+		<h1>Historia y Contexto</h1>
+		<p>La Universidad Nacional de Jujuy fue fundada en 1973 y ha
+			crecido para convertirse en una institución clave en la región del
+			noroeste argentino. La Facultad de Ingeniería ha jugado un papel
+			crucial en el desarrollo de la educación técnica y científica en la
+			provincia y en el país.</p>
+		<br> <br>
+		<h1>Carreras Ofrecidas</h1>
+		<p>La Facultad de Ingeniería de la UNJu ofrece varias carreras de
+			grado y posgrado en diferentes ramas de la ingeniería. Algunas de las
+			carreras de grado incluyen:</p>
+		<ul>			
+			<li>Ingeniería en Informática: Esta carrera se centra en la formación de profesionales capaces de desarrollar, implementar y gestionar sistemas informáticos y tecnológicos.</li>
+			<li>Ingeniería Industrial: Enfocada en la optimización de procesos productivos y la gestión eficiente de recursos en diversas industrias.</li>
+			<li>Ingeniería Química: Se dedica a la formación de ingenieros con conocimientos en procesos químicos industriales, incluyendo la producción de materiales y la gestión ambiental.</li>
+		</ul>
+		<br> <br>
+		<h1>Investigacion y Extension</h1>
+		<p>La Facultad de Ingeniería está comprometida con la
+			investigación y la extensión comunitaria. Posee diversos centros y
+			laboratorios donde se llevan a cabo proyectos de investigación en
+			áreas como:</p>
+		<ul>
+			<li>Energías renovables</li>
+			<li>Tecnología de la información</li>
+			<li>Materiales y procesos industriales</li>
+			<li>Medio ambiente y desarrollo sostenible</li>
+		</ul>
+		<br> <br>
+		<h1>Infraestructura</h1>
+		<p>La Facultad de Ingeniería cuenta con modernas instalaciones que
+			incluyen aulas, laboratorios, bibliotecas y centros de investigación.
+			Estas instalaciones están diseñadas para proporcionar un entorno de
+			aprendizaje adecuado y fomentar la investigación de alta calidad.</p>
+		<br> <br>
+		<h1>Programas de Posgrado</h1>
+		<p>La facultad también ofrece programas de posgrado, tales como
+			maestrías y doctorados en diversas especialidades de la ingeniería.
+			Estos programas están orientados a la formación avanzada de
+			profesionales y a la realización de investigaciones de alto impacto.</p>
+		<br> <br>
+		<h1>Vinculacion Internacional</h1>
+		<p>La Facultad de Ingeniería de la UNJu mantiene convenios de
+			colaboración con diversas instituciones académicas y científicas a
+			nivel nacional e internacional. Estos convenios facilitan el
+			intercambio de estudiantes y profesores, así como la realización de
+			proyectos de investigación conjunta.</p>
+		<br> <br>
+		<h1>Eventos y Actividades</h1>
+		<p>La facultad organiza y participa en numerosos eventos
+			académicos y científicos, como congresos, seminarios, talleres y
+			jornadas de actualización profesional. Estos eventos son una
+			oportunidad para que estudiantes y profesionales se actualicen en los
+			últimos avances de la ingeniería y compartan experiencias.</p>
+		<br> <br>
+	</div>
 
-</div>
 
-
-<footer data-th-insert="/layouts/footer :: footer"></footer>
+	<footer data-th-insert="/layouts/footer :: footer"></footer>
 
 
 <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}" type="text/javascript"></script>

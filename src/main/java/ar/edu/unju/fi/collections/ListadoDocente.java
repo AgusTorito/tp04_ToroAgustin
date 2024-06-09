@@ -2,12 +2,19 @@ package ar.edu.unju.fi.collections;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import ar.edu.unju.fi.model.Docente;
 
 public class ListadoDocente {
 		
 public static List<Docente> docentes = new ArrayList<Docente>();
 	
+
+		public static List<Docente> listarDocente() {
+			return docentes.stream().filter(docentes -> docentes.getEstado()).collect(Collectors.toList());
+		}
+
+
 	//Metodo para listar docentes por legajo
 	public static Docente buscarDocentePorLegajo (String legajo)
 	{
@@ -25,6 +32,7 @@ public static List<Docente> docentes = new ArrayList<Docente>();
 
 	public static void agregarDocente(Docente c)
 	{
+		c.setEstado(true);
 		docentes.add(c);
 	}
 	
