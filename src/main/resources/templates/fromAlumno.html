@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>Formulario de Alumnos</title>
 </head>
 <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 <link rel="stylesheet" href="/css/styles.css"/>
@@ -32,47 +32,49 @@ body {
 
 <body>
 
-<header data-th-insert="/layouts/header :: header"></header>
-<nav data-th-insert="/layouts/header :: navbar"></nav>
+<header data-th-insert="~{/layouts/header :: header}"></header>
+<nav data-th-insert="~{/layouts/header :: navbar}"></nav>
 
 	<div class="container">
 		<h1>Formulario Alumno</h1>
-		<form data-th-object="${nuevoAlumno}">
+		<form data-th-object="${nuevoAlumno}" data-th-action="${band}?@{/modificarAlumno}:@{/guardarAlumno}"  method="post">
 			<div class="mb-3">
-				<label for="exampleInputdni" class="form-label">DNI</label> <input type="text" class="form-control"
-					id="exampleInputdni" aria-describedby="dniHelp">
-				<div id="dniHelp" class="form-text">Una vez ingresado el DNI, no podrá modificarlo</div>
+				<label for="dni" class="form-label">DNI</label>*<input type="text" class="form-control"
+					id="dni" aria-describedby="dniHelp" data-th-field="*{dni}" required>
 			</div>
 			<div class="mb-3">
-				<label for="exampleInputNomYApell" class="form-label">Apellido y Nombre</label> <input type="text" class="form-control"
-					id="exampleInputNomYApell">
+				<label for="nombre" class="form-label">Nombre</label> <input type="text" class="form-control"
+					id="nombre" data-th-field="*{nombre}" required>
 			</div>
 			<div class="mb-3">
-				<label for="exampleInputEmail1" class="form-label">Email
-					address</label> <input type="email" class="form-control"
-					id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label for="apellido" class="form-label">Apellido</label> <input type="text" class="form-control"
+					id="apellido" data-th-field="*{apellido}" required>
+			</div>
+			<div class="mb-3">
+				<label for="email" class="form-label">Email</label> <input type="email" class="form-control"
+					id="email" aria-describedby="emailHelp" data-th-field="*{email}">
 				<div id="emailHelp" class="form-text">Agregar un email valido</div>
 			</div>
 			<div class="mb-3">
-				<label for="exampleInputTel" class="form-label">Telefono</label> <input type="number" class="form-control"
-					id="exampleInputTel">
+				<label for="telefono" class="form-label">Telefono</label> <input type="number" class="form-control"
+					id="telefono" data-th-field="*{telefono}">
 			</div>
 			<div class="mb-3">
-				<label for="exampleInputFec" class="form-label">Fecha de Nacimiento</label> <input type="date" class="form-control"
-					id="exampleInputFec">
+				<label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label> <input type="date" class="form-control"
+					id="fechaNacimiento" data-th-field="*{fecNac}">
 			</div>
 			<div class="mb-3">
-				<label for="exampleInputDoc" class="form-label">Domicilio</label> <input type="text" class="form-control"
-					id="exampleInputDoc">
+				<label for="domicilio" class="form-label">Domicilio</label> <input type="text" class="form-control"
+					id="domicilio" data-th-field="*{domicilio}">
 			</div>
 			<div class="mb-3">
-				<label for="exampleInputLU" class="form-label">Libreta Universitaria</label>
+				<label for="libreta" class="form-label">Libreta Universitaria</label>
 				<input type="number" class="form-control"
-					id="exampleInputLU">
+					id="libreta" data-th-field="*{libreta}" required>
 			</div>
 			<div class="mb-3 form-check">
-				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">La informacion proporcionada es correcta</label>
+				<input type="checkbox" class="form-check-input" id="check">
+				<label class="form-check-label" for="check">La informacion proporcionada es correcta</label>
 			</div>
 			<button type="submit" class="btn btn-primary">Agregar</button>
 		</form>
@@ -81,7 +83,7 @@ body {
 	<br>
 	<br>
 	
-	<footer data-th-insert="/layouts/footer :: footer"></footer>
+	<footer data-th-insert="~{/layouts/footer :: footer}"></footer>
 
 <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}" type="text/javascript"></script>
 </body>

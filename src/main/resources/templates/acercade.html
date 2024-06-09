@@ -7,150 +7,35 @@
 <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 <link rel="stylesheet" href="/css/styles.css"/>
 </head>
+<style>
+	* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+</style>
 <body>
 
-<header data-th-insert="/layouts/header :: header"></header>
-<nav data-th-insert="/layouts/header :: navbar"></nav>
+<header data-th-insert="~{/layouts/header :: header}"></header>
+<nav data-th-insert="~{/layouts/header :: navbar}"></nav>
 
-<main class="col-md-12">
-	<div class="p-3">
-					<h1>Listado de los Alumnos</h1>
-					<a th:href="@{/formularioAlumno}" class="btn btn-success">Añadir un Alumno</a>
-					<div class="container">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th scope="col">DNI</th>
-									<th scope="col">Nombre</th>
-									<th scope="col">Apellido</th>
-									<th scope="col">Email</th>
-									<th scope="col">Teléfono</th>
-									<th scope="col">Fecha de Nacimiento</th>
-									<th scope="col">Domicilio</th>
-									<th scope="col">Legajo</th>
-									<th scope="col">Estado</th>
-									<th scope="col">Edición</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="alumno : ${listadoAlumnos}">
-									<td th:text="${alumno.dni}"></td>
-									<td th:text="${alumno.nombre}"></td>
-									<td th:text="${alumno.apellido}"></td>
-									<td th:text="${alumno.email}"></td>
-									<td th:text="${alumno.telefono}"></td>
-									<td th:text="${alumno.fechaNacimiento}"></td>
-									<td th:text="${alumno.domicilio}"></td>
-									<td th:text="${alumno.legajo}"></td>
-									<td th:text="${alumno.estado}"></td>
-									<td><a th:href="@{'/borrarAlumno/'+${alumno.legajo}}"
-										class="btn btn-danger">Borrar</a> <a
-										th:href="@{'/editarAlumno/'+${alumno.legajo}}"
-										class="btn btn-warning">Modificar</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				
-			<div class="p-3">
-					<h1>Listado de las Carreras</h1>
-					<a th:href="@{/formularioCarrera}" class="btn btn-success mb-3">Añadir una Carrera</a>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th scope="col">Código</th>
-								<th scope="col">Nombre</th>
-								<th scope="col">Cantidad de Años</th>
-								<th scope="col">Estado</th>
-								<th scope="col">Edición</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr th:each="carrera : ${listadoCarreras}">
-								<td th:text="${carrera.codigo}"></td>
-								<td th:text="${carrera.nombre}"></td>
-								<td th:text="${carrera.cantidadAnios}"></td>
-								<td th:text="${carrera.estado ? 'Activo' : 'Inactivo'}"></td>
-								<td><a th:href="@{'/borrarCarrera/' + ${carrera.codigo}}"
-									class="btn btn-danger">Borrar</a> <a
-									th:href="@{'/editarCarrera/' + ${carrera.codigo}}"
-									class="btn btn-warning">Modificar</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				
-			<div class="p-3">
-					<h1>Listado de los Docentes</h1>
-					<a th:href="@{/formularioDocente}" class="btn btn-success">Añadir un Docente</a>
+<div class="container">
 
-					<div class="container">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th scope="col">Legajo</th>
-									<th scope="col">Nombre</th>
-									<th scope="col">Apellido</th>
-									<th scope="col">Email</th>
-									<th scope="col">Teléfono</th>
-									<th scope="col">Estado</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="docente : ${listadoDocentes}">
-									<td th:text="${docente.legajo}"></td>
-									<td th:text="${docente.nombre}"></td>
-									<td th:text="${docente.apellido}"></td>
-									<td th:text="${docente.email}"></td>
-									<td th:text="${docente.telefono}"></td>
-									<td th:text="${docente.estado}"></td>
-									<td><a th:href="@{'/borrarDocente/'+${docente.legajo}}"
-										class="btn btn-danger">Borrar</a> <a
-										th:href="@{'/editarDocente/'+${docente.legajo}}"
-										class="btn btn-warning">Modificar</a></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				
-				<div class="p-3">
-                    <h1>Listado de las Materias</h1>
-                    <a th:href="@{/formularioMateria}" class="btn btn-success mb-3">Añadir una Materia</a>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Código</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Curso</th>
-                                <th scope="col">Cantidad de Horas</th>
-                                <th scope="col">Modalidad</th>
-                                <th scope="col">Docente</th>
-                                <th scope="col">Carrera</th>
-                                <th scope="col">Estado</th>
-                                <th scope="col">Edición</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr th:each="materia : ${listadoMaterias}">
-                                <td th:text="${materia.codigo}"></td>
-                                <td th:text="${materia.nombre}"></td>
-                                <td th:text="${materia.curso}"></td>
-                                <td th:text="${materia.cantidadHoras}"></td>
-                                <td th:text="${materia.modalidad}"></td>
-                                <td th:text="${materia.docente.nombre}"></td>
-                                <td th:text="${materia.carrera.nombre}"></td>
-                                <td th:text="${materia.estado ? 'Activo' : 'Inactivo'}"></td>
-                                <td>
-                                    <a th:href="@{'/borrarMateria/' + ${materia.codigo}}" class="btn btn-danger">Borrar</a>
-                                    <a th:href="@{'/editarMateria/' + ${materia.codigo}}" class="btn btn-warning">Modificar</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-</main>
+</div>
 
 
 <footer data-th-insert="/layouts/footer :: footer"></footer>

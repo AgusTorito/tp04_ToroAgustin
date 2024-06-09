@@ -1,24 +1,28 @@
 package ar.edu.unju.fi.model;
 
+import java.time.LocalDate;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alumno {
 	private String dni;
 	private String nombre;
 	private String apellido;
 	private String email;
-	private int telefono;
-	private String fecNac;
+	private String telefono;
+	private LocalDate fecNac;
 	private String domicilio;
-	private int LU;
-	
+	private String libreta;
+	private Boolean estado;
 	
 	
 	public Alumno() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public Alumno(String dni, String nombre, String apellido, String email, int telefono, String fecNac,
-			String domicilio, int lU) {
+	public Alumno(String dni, String nombre, String apellido, String email, String telefono, LocalDate fecNac,
+			String domicilio, String libreta, Boolean estado) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -27,70 +31,63 @@ public class Alumno {
 		this.telefono = telefono;
 		this.fecNac = fecNac;
 		this.domicilio = domicilio;
-		LU = lU;
+		this.libreta = libreta;
+		this.estado = estado;
 	}
-
 	public String getDni() {
 		return dni;
 	}
-
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-
 	public String getNombre() {
 		return nombre;
 	}
-
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 	public String getApellido() {
 		return apellido;
 	}
-
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
-
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-
-	public String getFecNac() {
+	public LocalDate getFecNac() {
 		return fecNac;
 	}
-
-	public void setFecNac(String fecNac) {
+	public void setFecNac(LocalDate fecNac) {
 		this.fecNac = fecNac;
 	}
-
 	public String getDomicilio() {
 		return domicilio;
 	}
-
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
-
-	public int getLU() {
-		return LU;
+	public String getLibreta() {
+		return libreta;
 	}
-
-	public void setLU(int lU) {
-		LU = lU;
+	public void setLibreta(String libreta) {
+		this.libreta = libreta;
 	}
+	public Boolean getEstado() {
+		return estado;
+	}
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
+	}
+	
+	
 }
